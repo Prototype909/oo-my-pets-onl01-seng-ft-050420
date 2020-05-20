@@ -58,4 +58,21 @@ class Owner
       cat.mood = "happy"
     end
   end
+
+  def sell_pets
+    cats.collect do |cat|
+      cat.mood = "nervous"
+      cat.owner = nil
+    end
+    dogs.collect do |dog|
+      dog.mood = "nervous"
+    dog.owner = nil
+    end
+  end
+
+  def list_pets
+    um_dogs = dogs.count
+    num_cats = cats.count
+    return "I have #{num_dogs} dog(s), and #{num_cats} cat(s)."
+  end 
 end
