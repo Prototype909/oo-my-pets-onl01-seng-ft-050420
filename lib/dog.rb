@@ -15,4 +15,10 @@ class Dog
   def self.all
     @@all
   end
+
+  def dogs
+    Dog.all.select do |dog|
+      cat.owner == self
+    end
+  end
 end
