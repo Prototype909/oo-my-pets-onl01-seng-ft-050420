@@ -52,4 +52,10 @@ class Owner
        dog.mood = "happy"
     end
   end
+
+  def feed_cats
+    cats.collect do |cat|
+      cat.mood = "happy"
+    end
+  end
 end
